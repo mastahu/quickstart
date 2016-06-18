@@ -14,6 +14,7 @@ public class FirstServlet extends HttpServlet {
                 "</head>" +
                 "<body>" +
                 "   <h3>Hello world</h3>" +
+                "   <script>alert('Hello World!')</script>" +
                 "</body>" +
                 "</html>";
         resp.getOutputStream().print(html);

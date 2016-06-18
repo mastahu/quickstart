@@ -10,6 +10,7 @@ public class WithJspServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.setAttribute("name", "Zdzisław");
         request.getRequestDispatcher("/WEB-INF/second.jsp").forward(request, response);
     }
 }

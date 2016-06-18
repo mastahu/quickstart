@@ -8,12 +8,22 @@ http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
 
   <servlet>
     <servlet-name>first</servlet-name>
-    <servlet-class>FirstServlet</servlet-class>
+    <servlet-class>it.morfoza.quickstart.FirstServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>withjsp</servlet-name>
+    <servlet-class>it.morfoza.quickstart.WithJspServlet</servlet-class>
   </servlet>
 
   <servlet-mapping>
     <servlet-name>first</servlet-name>
     <url-pattern>/first</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>withjsp</servlet-name>
+    <url-pattern>/second</url-pattern>
   </servlet-mapping>
 
 </web-app>

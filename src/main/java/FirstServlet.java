@@ -8,6 +8,14 @@ public class FirstServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        resp.getOutputStream().println("Hello world!");
+        String html = "" +
+                "<html>" +
+                "<head>" +
+                "</head>" +
+                "<body>" +
+                "   <h3>Hello world</h3>" +
+                "</body>" +
+                "</html>";
+        resp.getOutputStream().print(html);
     }
 }

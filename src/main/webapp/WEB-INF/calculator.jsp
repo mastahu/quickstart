@@ -2,6 +2,7 @@
 
 <html>
 <body>
+${error}
 Result: ${param.number1} + ${param.number2} = ${result}
 </body>
 </html>

@@ -13,7 +13,20 @@ public class CalculatorServlet extends HttpServlet {
         try {
             long number1 = Long.parseLong(req.getParameter("number1"));
             long number2 = Long.parseLong(req.getParameter("number2"));
-            req.setAttribute("result", number1 + number2);
+
+
+            long result;
+            String operation = req.getParameter("operation");
+            if("+".equals(operation)){
+                result = number1 + number2;
+            } else if ("-".equals(operation)) {
+                result = number1 - number2;
+            } else {
+                throw new RuntimeException("Wrong operation parameter!");
+            }
+
+
+            req.setAttribute("result", result);
         } catch (NumberFormatException e) {
             req.setAttribute("error", "Wrong number format!");
         }

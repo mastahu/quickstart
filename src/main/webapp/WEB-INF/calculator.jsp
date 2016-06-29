@@ -3,6 +3,6 @@
 <html>
 <body>
 ${error}
-Result: ${param.number1} + ${param.number2} = ${result}
+Result: ${param.number1} ${param.operation} ${param.number2} = ${result}
 </body>
 </html>

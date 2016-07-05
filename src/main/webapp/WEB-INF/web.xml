@@ -26,6 +26,11 @@ http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
     <servlet-class>it.morfoza.quickstart.Java8Servlet</servlet-class>
   </servlet>
 
+  <servlet>
+    <servlet-name>jstl</servlet-name>
+    <servlet-class>it.morfoza.quickstart.STLServlet</servlet-class>
+  </servlet>
+
   <servlet-mapping>
     <servlet-name>first</servlet-name>
     <url-pattern>/first</url-pattern>
@@ -44,6 +49,11 @@ http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
   <servlet-mapping>
     <servlet-name>java8</servlet-name>
     <url-pattern>/java8</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>jstl</servlet-name>
+    <url-pattern>/jstl</url-pattern>
   </servlet-mapping>
 
 </web-app>

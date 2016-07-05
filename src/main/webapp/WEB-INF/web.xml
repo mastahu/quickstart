@@ -21,6 +21,11 @@ http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
     <servlet-class>it.morfoza.quickstart.CalculatorServlet</servlet-class>
   </servlet>
 
+  <servlet>
+    <servlet-name>java8</servlet-name>
+    <servlet-class>it.morfoza.quickstart.Java8Servlet</servlet-class>
+  </servlet>
+
   <servlet-mapping>
     <servlet-name>first</servlet-name>
     <url-pattern>/first</url-pattern>
@@ -36,6 +41,10 @@ http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
     <url-pattern>/calculator</url-pattern>
   </servlet-mapping>
 
+  <servlet-mapping>
+    <servlet-name>java8</servlet-name>
+    <url-pattern>/java8</url-pattern>
+  </servlet-mapping>
 
 </web-app>
 

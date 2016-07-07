@@ -1,4 +1,4 @@
-package it.morfoza.quickstart.library;
+package it.morfoza.quickstart.library.classic;
 
 
 import javax.servlet.ServletException;

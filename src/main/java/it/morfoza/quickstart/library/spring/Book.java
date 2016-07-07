@@ -1,4 +1,4 @@
-package it.morfoza.quickstart.library;
+package it.morfoza.quickstart.library.spring;
 
 public class Book {
 

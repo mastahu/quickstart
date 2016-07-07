@@ -1,4 +1,4 @@
-package it.morfoza.quickstart.library;
+package it.morfoza.quickstart.library.classic;
 
 
 import java.util.ArrayList;
@@ -16,7 +16,7 @@ public enum Library {
         books.add(new Book("Hollywood", "Charles Bukowski"));
     }
 
-    List<Book> getBooks() {
+    public List<Book> getBooks() {
         return Collections.unmodifiableList(books);
     }
 }

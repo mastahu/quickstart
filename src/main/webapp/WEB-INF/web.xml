@@ -6,6 +6,10 @@ http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
          id="WebApp_ID" version="3.0">
   <display-name>Archetype Created Web Application</display-name>
 
+  <listener>
+    <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+  </listener>
+
   <servlet>
     <servlet-name>first</servlet-name>
     <servlet-class>it.morfoza.quickstart.FirstServlet</servlet-class>
@@ -32,8 +36,13 @@ http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
   </servlet>
 
   <servlet>
-    <servlet-name>listbooks</servlet-name>
-    <servlet-class>it.morfoza.quickstart.library.ListBooksServlet</servlet-class>
+    <servlet-name>listbooksclassic</servlet-name>
+    <servlet-class>it.morfoza.quickstart.library.classic.ListBooksServlet</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>listbooksspring</servlet-name>
+    <servlet-class>it.morfoza.quickstart.library.spring.ListBooksServlet</servlet-class>
   </servlet>
 
   <servlet-mapping>
@@ -62,8 +71,13 @@ http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
   </servlet-mapping>
 
   <servlet-mapping>
-    <servlet-name>listbooks</servlet-name>
-    <url-pattern>/library/books</url-pattern>
+    <servlet-name>listbooksclassic</servlet-name>
+    <url-pattern>/library/classic/books</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>listbooksspring</servlet-name>
+    <url-pattern>/library/spring/books</url-pattern>
   </servlet-mapping>
 
 </web-app>

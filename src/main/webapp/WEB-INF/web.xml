@@ -80,6 +80,16 @@ http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
     <url-pattern>/library/spring/books</url-pattern>
   </servlet-mapping>
 
+  <servlet>
+    <servlet-name>listbooksdb</servlet-name>
+    <servlet-class>it.morfoza.quickstart.library.spring.ListBooksServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>listbooksdb</servlet-name>
+    <url-pattern>/library/db/books</url-pattern>
+  </servlet-mapping>
+
 </web-app>
 
 

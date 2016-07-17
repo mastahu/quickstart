@@ -2,7 +2,7 @@
          xmlns="http://java.sun.com/xml/ns/javaee"
          xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
          xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
-http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+         http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
          id="WebApp_ID" version="3.0">
   <display-name>Archetype Created Web Application</display-name>
 
@@ -88,6 +88,16 @@ http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
   <servlet-mapping>
     <servlet-name>listbooksdb</servlet-name>
     <url-pattern>/library/db/books</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>listbooksjpa</servlet-name>
+    <servlet-class>it.morfoza.quickstart.library.jpa.ListBooksServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>listbooksjpa</servlet-name>
+    <url-pattern>/library/jpa/books</url-pattern>
   </servlet-mapping>
 
 </web-app>

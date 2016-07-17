@@ -82,7 +82,7 @@
 
   <servlet>
     <servlet-name>listbooksdb</servlet-name>
-    <servlet-class>it.morfoza.quickstart.library.spring.ListBooksServlet</servlet-class>
+    <servlet-class>it.morfoza.quickstart.library.db.ListBooksServlet</servlet-class>
   </servlet>
 
   <servlet-mapping>

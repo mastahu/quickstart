@@ -10,8 +10,12 @@ public class Book {
     @GeneratedValue(strategy=GenerationType.AUTO)
     private long id;
 
-    private final String title;
-    private final String author;
+    private String title;
+    private String author;
+
+    private Book() {
+
+    }
 
     public Book(String title, String author) {
         this.title = title;

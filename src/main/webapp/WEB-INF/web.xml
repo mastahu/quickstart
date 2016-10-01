@@ -45,6 +45,11 @@
     <servlet-class>it.morfoza.quickstart.library.spring.ListBooksServlet</servlet-class>
   </servlet>
 
+  <servlet>
+    <servlet-name>jndi</servlet-name>
+    <servlet-class>it.morfoza.quickstart.jndi.JNDIServlet</servlet-class>
+  </servlet>
+
   <servlet-mapping>
     <servlet-name>first</servlet-name>
     <url-pattern>/first</url-pattern>
@@ -82,7 +87,7 @@
 
   <servlet>
     <servlet-name>listbooksdb</servlet-name>
-    <servlet-class>it.morfoza.quickstart.library.db.ListBooksServlet</servlet-class>
+    <servlet-class>it.morfoza.quickstart.library.database.ListBooksServlet</servlet-class>
   </servlet>
 
   <servlet-mapping>
@@ -99,6 +104,36 @@
     <servlet-name>listbooksjpa</servlet-name>
     <url-pattern>/library/jpa/books</url-pattern>
   </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>jndi</servlet-name>
+    <url-pattern>/jndi</url-pattern>
+  </servlet-mapping>
+
+  <resource-env-ref>
+    <description>
+      Object factory for MyBean instances.
+    </description>
+    <resource-env-ref-name>
+      bean/MyBeanFactory
+    </resource-env-ref-name>
+    <resource-env-ref-type>
+      it.morfoza.quickstart.jndi.MyBean
+    </resource-env-ref-type>
+  </resource-env-ref>
+
+  <resource-env-ref>
+    <description>
+      Object factory for MyBean instances.
+    </description>
+    <resource-env-ref-name>
+      bean/MyBeanFactory2
+    </resource-env-ref-name>
+    <resource-env-ref-type>
+      java.lang.Object
+    </resource-env-ref-type>
+  </resource-env-ref>
+
 
 </web-app>
 

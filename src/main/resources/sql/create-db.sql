@@ -1,4 +1,4 @@
---DROP TABLE books IF EXISTS;
+DROP TABLE books IF EXISTS;
 
 CREATE TABLE books (
   id         INTEGER PRIMARY KEY,

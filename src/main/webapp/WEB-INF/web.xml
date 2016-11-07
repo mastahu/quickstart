@@ -45,11 +45,6 @@
     <servlet-class>it.morfoza.quickstart.library.spring.ListBooksServlet</servlet-class>
   </servlet>
 
-  <servlet>
-    <servlet-name>jndi</servlet-name>
-    <servlet-class>it.morfoza.quickstart.jndi.JNDIServlet</servlet-class>
-  </servlet>
-
   <servlet-mapping>
     <servlet-name>first</servlet-name>
     <url-pattern>/first</url-pattern>
@@ -105,10 +100,45 @@
     <url-pattern>/library/jpa/books</url-pattern>
   </servlet-mapping>
 
-  <servlet-mapping>
-    <servlet-name>jndi</servlet-name>
-    <url-pattern>/jndi</url-pattern>
-  </servlet-mapping>
+    <servlet>
+        <servlet-name>jndi</servlet-name>
+        <servlet-class>it.morfoza.quickstart.jndi.JNDIServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>jndi</servlet-name>
+        <url-pattern>/jndi</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>javamail</servlet-name>
+        <servlet-class>it.morfoza.quickstart.jndi.JavaMailServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>javamail</servlet-name>
+        <url-pattern>/javamail</url-pattern>
+    </servlet-mapping>
+
+
+    <resource-ref>
+        <description>
+            Resource reference to a factory for javax.mail.Session
+            instances that may be used for sending electronic mail
+            messages, preconfigured to connect to the appropriate
+            SMTP server.
+        </description>
+        <res-ref-name>
+            mail/Session
+        </res-ref-name>
+        <res-type>
+            javax.mail.Session
+        </res-type>
+        <res-auth>
+            Container
+        </res-auth>
+    </resource-ref>
+
 
   <resource-env-ref>
     <description>
@@ -133,6 +163,8 @@
       java.lang.Object
     </resource-env-ref-type>
   </resource-env-ref>
+
+
 
 
 </web-app>

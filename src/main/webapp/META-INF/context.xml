@@ -1,0 +1,14 @@
+<Context >
+
+
+<Valve className="org.apache.catalina.valves.AccessLogValve"
+prefix="example_access_log" suffix=".txt"
+pattern="common"/>
+
+
+  <Resource name="bean/MyBeanFactory2" auth="Container"
+            type="java.lang.Object"
+            factory="org.apache.naming.factory.BeanFactory"
+           />
+
+</Context>
